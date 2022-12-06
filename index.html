@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Alura Books</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
-    <title>Alura Books</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -49,5 +50,75 @@
         <p class="banner__texto">Encontre me nossa estante o que precisa para seu desenvolvimento</p>
         <input type="search" class="banner__pesquisa" placeholder="Qual será sua proxima leitura?">
     </section>
+
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Novos lançamentos</h2>
+        <!-- Slider main container -->
+<div class="swiper">
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="img/carrossel1.svg" alt="imagem teste"></div>
+        <div class="swiper-slide"><img src="img/carrossel2.svg" alt="imagem teste"></div>
+        <div class="swiper-slide"><img src="img/carrossel3.svg" alt="imagem teste"></div>
+        <div class="swiper-slide"><img src="img/carrossel4.svg" alt="imagem teste"></div>
+        <div class="swiper-slide"><img src="img/carrossel5.svg" alt="imagem teste"></div>
+        <div class="swiper-slide"><img src="img/carrossel6.svg" alt="imagem teste"></div>
+        <div class="swiper-slide"><img src="img/carrossel7.svg" alt="imagem teste"></div>
+        <div class="swiper-slide"><img src="img/carrossel8.svg" alt="imagem teste"></div>
+        <div class="swiper-slide"><img src="img/carrossel9.svg" alt="imagem teste"></div>
+        ...
+        </div>
+        
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="card">
+        <div class="card__descricao">
+
+        <div class="descricao">
+            <h3 class="descricao__titulo">Talvez você se interesse por...</h3>
+            <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+            <p class="descricao__texto">Construindo uma aplicação com a plataforma</p>
+
+            </div>
+            <img src="img/Angular.png" alt="Livro angular">
+        </div>
+
+        <div class="card__botoes">
+
+            <ul class="botoes">
+            <li class="botoes__item"><img src="img/Favoritos.svg" alt="Favorito"></li>
+            <li class="botoes__item"><img src="img/Compras.svg" alt="carrinho"></li>
+            </ul>
+            <a href="#" class="botoes__ancora">Saiba mais</a>
+        </div>
+
+    </div>
+
+    </section>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper',{
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+  },
+        });
+    </script>
 </body>
 </html>
